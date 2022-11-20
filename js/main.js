@@ -30,6 +30,8 @@ $("#nameList").on("click", () => {
             $("#headline").html("")
         },1000)
     } else {
+      $("#entries").html(`${arr.length} Entries `)
+      $("#entries").show()
         $(dropdown).fadeIn("slow")
         $(namesbox).fadeIn("slow")
         $(namesbox).removeAttr("disabled")
@@ -70,9 +72,11 @@ $("#dataFile").on("change", () => {
 
 
 $("#fileLoadingForm").on("submit", function (e) {
-
+  // Prevent the defaul form submision action
+  e.preventDefault();
     $(dropdown).fadeIn("slow");
 
+/*Asyncrouosuly submit the form data to the server*/
     $.ajax({
         type: 'POST',
         url: 'index.php',
@@ -90,14 +94,11 @@ $("#fileLoadingForm").on("submit", function (e) {
             let resData = JSON.parse(response)
             $("#entries").html("<img src='/images/loading.gif'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
-            setTimeout(()=>{
-              $("#entries").html("<img src='/images/loading.gif'/>")
-              $("#entries").append(`<p>Loading ${resData.length} Entries..<p>`)
-            },1000)
+
             setTimeout(()=>{
               $("#entries").html("<img src='/images/loading.gif'/>")
               $("#entries").append(`<p>Finalising the List..<p>`)
-            },2000)
+            },1000)
             $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
 
@@ -120,25 +121,21 @@ $("#fileLoadingForm").on("submit", function (e) {
             }
             /*Set the Values of the Text box with  nums*/
             $(namesbox).val(nums)
-
             setTimeout(() => {
               $('#entries').html('');
                 $("#entries").html(`${arr.length} Entries Loaded`)
-                $(namesbox).animate({display:block},3000, ()=>{
-                  // $(namesbox).fadeIn("slow")
+                  $(namesbox).fadeIn("slow")
                   $("#go-btn").fadeIn("slow")
                   $("#reset").fadeIn("slow")
                   $("#upload").hide()
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
                   $("#main-nav").css({ "padding-top": "5px" });
-                })
 
-            }, 2500)
-            // clearTimeout();
+            },2000)
         }
     });
-    e.preventDefault();
+
 })
 
 function DownloadResults(){
@@ -189,6 +186,8 @@ function Draw() {
         alert("No Entries at the Moment")
     } else {
         $("#go-btn").attr('disabled', 'disabled')
+        $("#nameList").attr('disabled', 'disabled')
+        $("#shw-results").attr('disabled', 'disabled')
         $('#headline').hide();
         const randIndex = Math.round(Math.random() * arr.length)
         const atrelem = arr[randIndex];
@@ -307,10 +306,12 @@ function saveEntries() {
     var nameupdated = "";
     $("#go-btn").removeAttr('disabled')
     if ($(namesbox).val() === "") {
+      alert("No More Entries Left");
     } else {
         udateEntries();
     }
     $("#entries").html(`${arr.length} Entries`)
+    $("#entries").fadeIn("slow")
 }
 
 /*
@@ -342,6 +343,8 @@ function save() {
     }
 
     $("#go-btn").removeAttr('disabled')
+    $("#nameList").removeAttr('disabled')
+    $("#shw-results").removeAttr('disabled')
 
 }
 function reset() {
