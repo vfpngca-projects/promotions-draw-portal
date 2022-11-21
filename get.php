@@ -6,6 +6,9 @@ if(isset($_GET["pa"])){
             $files = scandir($dir,1);
             echo  json_encode($files);
             die();
+            case 'instructions':
+              include("instructions.php");
+              break;
         default:
 
             break;

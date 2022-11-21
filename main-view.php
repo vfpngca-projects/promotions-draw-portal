@@ -27,7 +27,7 @@
               <div id="varnote" class="container">
                   <img src="images/logo-footer.png">
                   <h1> Promotion Draw  Portal </h1>
-                  <div class="copyright">Vodafone PNG &copy; <span id="year"></span></div>
+
               </div>
               <div id="main-nav">
                     <div class="d-flex justify-content-center">
@@ -57,6 +57,16 @@
                   </div>
               </div>
       </main>
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+  <!-- Copyright -->
+  <div class="text-reset fw-bold text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <a class="text-reset fw-bold text-left p-4 copyright" href="https://vodafone.com.pg/" target="_blank">Vodafone PNG</a> &copy; <span id="year"></span>
+    <a class="text-reset fw-bold text-right p-4" id="instructions" href="#">Instructions of Use</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
       <script src="./js/main.js"></script>
   </body>
 </html>

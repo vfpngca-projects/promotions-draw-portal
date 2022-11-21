@@ -3,7 +3,7 @@
        $entries= array();
        $resEntries=array();
       if($_FILES['upfile']["error"]){
-           echo  $_FILES['upfile']["error"];
+           echo  json_encode($_FILES['upfile']["error"]);
       }else{
         try {
           $file_name = $_FILES['upfile']['name'];

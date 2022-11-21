@@ -71,6 +71,24 @@ $("#dataFile").on("change", () => {
 })
 
 
+
+$("#instructions").on("click", function(e){
+  e.preventDefault();
+  $.ajax({
+    type:"GET",
+    url:"index.php?pa=instructions",
+    beforeSend:()=>{
+
+    },
+    success:(response)=>{
+      $("#modal-1-body").html(response)
+      $("#modal-1").fadeIn("slow")
+    }
+  })
+
+})
+
+
 $("#fileLoadingForm").on("submit", function (e) {
   // Prevent the defaul form submision action
   e.preventDefault();
@@ -91,13 +109,14 @@ $("#fileLoadingForm").on("submit", function (e) {
         },
 
         success: (response) => {
+          console.log("Rresponse recived  ")
             let resData = JSON.parse(response)
             $("#entries").html("<img src='/images/loading.gif'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
 
             setTimeout(()=>{
               $("#entries").html("<img src='/images/loading.gif'/>")
-              $("#entries").append(`<p>Finalising the List..<p>`)
+              $("#entries").append(`<p>Finalising list..<p>`)
             },1000)
             $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
