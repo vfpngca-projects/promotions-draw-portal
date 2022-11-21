@@ -127,7 +127,7 @@ $("#fileLoadingForm").on("submit", function (e) {
               arr.push(elem)
             });
 
-            resData=null;
+            // resData=null;
             let nums = arr[0];
 
             /*
