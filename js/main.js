@@ -120,14 +120,12 @@ $("#fileLoadingForm").on("submit", function (e) {
             },1000)
             $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
-
-
             /* Loop through the response data array and store each element into  main data array arr[]*/
-            // resData.map((elem) => {
-            //   arr.push(elem)
-            // });
+            resData.forEach(elem => {
+              arr.push(elem)
+            });
 
-            // resData=null;
+            resData=null;
             let nums = arr[0];
 
             /*
