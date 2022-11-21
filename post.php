@@ -15,7 +15,7 @@
           $file_type=$_FILES['upfile']['type'];
           $fileNameParts = explode('.', $file_name);
           $ext = end($fileNameParts);
-          $target_dir ="files/";
+          $target_dir ="./files/";
           $newfileName=date("ymdHis").microtime(true);
           $newName=$newfileName.".".$ext;
           $fileNow=$target_dir. $newName;
@@ -66,7 +66,7 @@
       $a1 = array();
       $csvFile=date("d-M-Y-His").microtime(true).".csv";
       try {
-        $fh= fopen(__DIR__."./files/".$csvFile,"w");
+        $fh= fopen("./files/".$csvFile,"w");
          fputcsv($fh, $headers);
          foreach($_POST["results"] as $winner){
              $resultArray["id"]= $count;
@@ -78,14 +78,14 @@
          foreach($a1 as $fields){
               fputcsv($fh, $fields);
          }
-         if(file_exists(__DIR__."./files/".$csvFile)){
+         if(file_exists("./files/".$csvFile)){
              header("Cache-Control:public");
              header("Content-Desccription:File Transfer");
              header("Content-Despostion:attachement;filename=$csvFile");
              header("Content-Type:application/csv; charset=UTF-8");
              header("Content-Transfer-Encoding:binary");
-             readfile("files/".$csvFile);
-             unlink(__DIR__."./files/".$csvFile);
+             readfile("./files/".$csvFile);
+             unlink("./files/".$csvFile);
              exit();
          }else{
            echo json_encode("Oh! Nooo...");
