@@ -2,8 +2,11 @@
   if(isset($_FILES["upfile"])){
        $entries= array();
        $resEntries=array();
+       $respose= array('status' =>"" ,"message"=>"" );
       if($_FILES['upfile']["error"]){
-           echo  json_encode($_FILES['upfile']["error"]);
+        $respose["status"]="error";
+        $respose["message"]=$_FILES['upfile']["error"];
+           echo  json_encode($respose);
       }else{
         try {
           $file_name = $_FILES['upfile']['name'];
@@ -30,13 +33,27 @@
                       unlink($fileNow);
                       echo json_encode($entries);
                 } catch (\Exception $e) {
-                    echo json_encode($e->getMessage());
+                  $respose["status"]="error";
+                  $respose["message"]=$e->getMessage();
+                  echo  json_encode($respose);
                 }
-              }else{echo json_encode("Error");}
-            }else{echo json_encode("Error While Uploading file");
+              }else{
+                $respose["status"]="error";
+                $respose["message"]="Error while trying to retrieve file data";
+                   echo  json_encode($respose);
+                }
+            }else{
+              $respose["status"]="error";
+              $respose["message"]="Error While Uploading file";
+                 echo  json_encode($respose);
+
           }
         } catch (\Exception $e) {
-          echo json_encode($e->getMessage());
+
+          $respose["status"]="error";
+          $respose["message"]=$e->getMessage();
+             echo  json_encode($respose);
+
         }
       }
     die();
