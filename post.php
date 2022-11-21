@@ -66,7 +66,7 @@
       $a1 = array();
       $csvFile=realpath("./files/results/drawresults.csv");
       try {
-        $fh= fopen($csvFile,"w");
+        $fh= fopen(realpath("./files/results/drawresults.csv"),"w");
          fputcsv($fh, $headers);
          foreach($_POST["results"] as $winner){
              $resultArray["id"]= $count;
