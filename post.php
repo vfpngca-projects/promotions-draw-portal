@@ -15,7 +15,7 @@
           $file_type=$_FILES['upfile']['type'];
           $fileNameParts = explode('.', $file_name);
           $ext = end($fileNameParts);
-          $target_dir ="files/entries/";
+          $target_dir ="files/";
           $newfileName=date("ymdHis").microtime(true);
           $newName=$newfileName.".".$ext;
           $fileNow=$target_dir. $newName;
@@ -33,7 +33,6 @@
                         $respose["message"]=$entries;
                       fclose($csvFile);
                       unlink($fileNow);
-
                       echo json_encode($respose);
                 } catch (\Exception $e) {
                   $respose["status"]="error";
@@ -60,7 +59,6 @@
   }
 
   if(isset($_POST["results"])){
-
       $date=date ("d/m/y H:i:s");
       $headers=array("Draw","Wining Number","Date and Time");
       $count=1;
