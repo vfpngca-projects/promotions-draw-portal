@@ -109,8 +109,8 @@ $("#fileLoadingForm").on("submit", function (e) {
         },
 
         success: (response) => {
-          console.log("Rresponse recived  ")
             let resData = JSON.parse(response)
+            console.log(resData)
             $("#entries").html("<img src='/images/loading.gif'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
 
