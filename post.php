@@ -15,7 +15,7 @@
           $file_type=$_FILES['upfile']['type'];
           $fileNameParts = explode('.', $file_name);
           $ext = end($fileNameParts);
-          $target_dir = __DIR__.".\/files\/entries\/";
+          $target_dir =".\files\entries\";
           $newfileName=date("ymdHis").microtime(true);
           $newName=$newfileName.".".$ext;
           $fileNow=$target_dir. $newName;
