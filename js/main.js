@@ -143,6 +143,9 @@ $("#fileLoadingForm").on("submit", function (e) {
                   $("#main-nav").css({ "padding-top": "5px" });
             },2000)
           }
+        },
+        error:(err)=>{
+          alert(err.message)
         }
     });
 })
@@ -172,8 +175,8 @@ function DownloadResults(){
         $("#modal-1-body").html("");
         $("#modal-1").fadeOut("slow")
         },
-        error:(e)=>{
-            console.log(e.message)
+        error:(err)=>{
+            console.log(err.message)
         }
     })
 }
