@@ -17,7 +17,7 @@
           $newName=$newfileName.".".$ext;
           $fileNow=$target_dir. $newName;
           $moveFIle=move_uploaded_file($file_tmp,$fileNow);
-          if($moveFIle==true){
+          if($moveFIle){
               if(file_exists($fileNow)){
                 try {
                   $csvFile=fopen($fileNow,"r");
