@@ -123,9 +123,9 @@ $("#fileLoadingForm").on("submit", function (e) {
 
 
             /* Loop through the response data array and store each element into  main data array arr[]*/
-            resData.map((elem) => {
-              arr.push(elem)
-            });
+            // resData.map((elem) => {
+            //   arr.push(elem)
+            // });
 
             // resData=null;
             let nums = arr[0];
