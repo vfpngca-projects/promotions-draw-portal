@@ -66,7 +66,7 @@
       $a1 = array();
       $csvFile=date("d-M-Y-His").microtime(true).".csv";
       try {
-        $fh= fopen("./files/".$csvFile,"w");
+        $fh= fopen(realpath("./files/".$csvFile),"w");
          fputcsv($fh, $headers);
          foreach($_POST["results"] as $winner){
              $resultArray["id"]= $count;
@@ -84,8 +84,8 @@
              header("Content-Despostion:attachement;filename=$csvFile");
              header("Content-Type:application/csv; charset=UTF-8");
              header("Content-Transfer-Encoding:binary");
-             readfile("./files/".$csvFile);
-             unlink("./files/".$csvFile);
+             readfile(realpath("./files/".$csvFile));
+             unlink(realpath("./files/".$csvFile));
              exit();
          }else{
            echo json_encode("Oh! Nooo...");
