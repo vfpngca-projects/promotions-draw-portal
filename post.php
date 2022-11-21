@@ -2,7 +2,7 @@
   if(isset($_FILES["upfile"])){
        $entries= array();
        $resEntries=array();
-       $respose= array('status' =>"" ,"message"=>"" );
+
       if($_FILES['upfile']["error"]){
         $respose["status"]="error";
         $respose["message"]=$_FILES['upfile']["error"];
@@ -15,7 +15,7 @@
           $file_type=$_FILES['upfile']['type'];
           $fileNameParts = explode('.', $file_name);
           $ext = end($fileNameParts);
-          $target_dir = "./files/entries/";
+          $target_dir = __DIR__."./files/entries/";
           $newfileName=date("ymdHis").microtime(true);
           $newName=$newfileName.".".$ext;
           $fileNow=$target_dir. $newName;
@@ -29,9 +29,12 @@
                               array_push($entries,$data[$i]);
                           }
                         }
+                        $respose["status"]="success";
+                        $respose["message"]=$entries;
                       fclose($csvFile);
                       unlink($fileNow);
-                      echo json_encode($entries);
+
+                      echo json_encode($respose);
                 } catch (\Exception $e) {
                   $respose["status"]="error";
                   $respose["message"]=$e->getMessage();
@@ -46,20 +49,18 @@
               $respose["status"]="error";
               $respose["message"]="Error While Uploading file";
                  echo  json_encode($respose);
-
           }
         } catch (\Exception $e) {
-
           $respose["status"]="error";
           $respose["message"]=$e->getMessage();
              echo  json_encode($respose);
-
         }
       }
     die();
   }
 
   if(isset($_POST["results"])){
+    
       $date=date ("d/m/y H:i:s");
       $headers=array("Draw","Wining Number","Date and Time");
       $count=1;
@@ -67,7 +68,7 @@
       $a1 = array();
       $csvFile=date("d-M-Y-His").microtime(true).".csv";
       try {
-        $fh= fopen("files/".$csvFile,"w");
+        $fh= fopen(__DIR__."./files/".$csvFile,"w");
          fputcsv($fh, $headers);
          foreach($_POST["results"] as $winner){
              $resultArray["id"]= $count;
@@ -79,14 +80,14 @@
          foreach($a1 as $fields){
               fputcsv($fh, $fields);
          }
-         if(file_exists("files/".$csvFile)){
+         if(file_exists(__DIR__."./files/".$csvFile)){
              header("Cache-Control:public");
              header("Content-Desccription:File Transfer");
              header("Content-Despostion:attachement;filename=$csvFile");
              header("Content-Type:application/csv; charset=UTF-8");
              header("Content-Transfer-Encoding:binary");
              readfile("files/".$csvFile);
-             unlink("files/".$csvFile);
+             unlink(__DIR__."./files/".$csvFile);
              exit();
          }else{
            echo json_encode("Oh! Nooo...");

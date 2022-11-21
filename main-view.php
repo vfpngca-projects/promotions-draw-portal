@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title> Promotions Draw-VFPNG</title>
+  <title> VF-PNG Promotions Draw</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +26,7 @@
           <div class="header" id="header">
               <div id="varnote" class="container">
                   <img src="images/logo-footer.png">
-                  <h1> Promotion Draw  Portal </h1>
-
+                  <h1 class="text-capitalize"> Promotion Draw  Portal </h1>
               </div>
               <div id="main-nav">
                     <div class="d-flex justify-content-center">

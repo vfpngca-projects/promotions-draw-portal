@@ -62,7 +62,6 @@ $("#shw-results").on("click", () => {
 $("#save-and-update").on("click", () => {
     $(namesbox).attr('disabled', 'disabled');
     saveEntries()
-
 })
 
 
@@ -77,15 +76,12 @@ $("#instructions").on("click", function(e){
   $.ajax({
     type:"GET",
     url:"index.php?pa=instructions",
-    beforeSend:()=>{
-
-    },
+    beforeSend:()=>{},
     success:(response)=>{
       $("#modal-1-body").html(response)
       $("#modal-1").fadeIn("slow")
     }
   })
-
 })
 
 
@@ -107,27 +103,24 @@ $("#fileLoadingForm").on("submit", function (e) {
             $("#entries").html("<img src='/images/loading.gif'/>")
             $("#entries").append("<p>Uploading File...<p>")
         },
-
         success: (response) => {
-            let resData = JSON.parse(response)
-            console.log(resData)
+          let resData = JSON.parse(response)
+          if(resData .status==="error"){}else {
             $("#entries").html("<img src='/images/loading.gif'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
-
             setTimeout(()=>{
               $("#entries").html("<img src='/images/loading.gif'/>")
               $("#entries").append(`<p>Finalising list..<p>`)
-            },1000)
+            },1500)
             $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
             /* Loop through the response data array and store each element into  main data array arr[]*/
-            resData.forEach(elem => {
+            const resnums=resData.message;
+            resData.message.forEach(elem => {
               arr.push(elem)
             });
-
             resData=null;
             let nums = arr[0];
-
             /*
               Loop through the data array and set line breaks to each elements
               starting from the second element of the array
@@ -141,18 +134,17 @@ $("#fileLoadingForm").on("submit", function (e) {
             setTimeout(() => {
               $('#entries').html('');
                 $("#entries").html(`${arr.length} Entries Loaded`)
-                  $(namesbox).fadeIn("slow")
+                  $(namesbox).fadeIn(2000)
                   $("#go-btn").fadeIn("slow")
                   $("#reset").fadeIn("slow")
                   $("#upload").hide()
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
                   $("#main-nav").css({ "padding-top": "5px" });
-
             },2000)
+          }
         }
     });
-
 })
 
 function DownloadResults(){
@@ -165,14 +157,12 @@ function DownloadResults(){
     const sec=now.getSeconds();
     const fileName="Draw-"+ye+""+mon+""+day+""+hour+""+min+""+sec+".csv";
     const dt=rsults
-
     $.ajax({
         type: 'POST',
         url: 'index.php',
         data:{results:dt} ,
         beforeSend: () => {
         },
-
         success: (response) => {
             var blob = new Blob([response])
             var link = document.createElement('a');
@@ -181,7 +171,6 @@ function DownloadResults(){
         link.click();
         $("#modal-1-body").html("");
         $("#modal-1").fadeOut("slow")
-        count=0;
         },
         error:(e)=>{
             console.log(e.message)
@@ -196,7 +185,6 @@ this function runs the the draw and piks out a random number from the main data 
 function Draw() {
     $("#entries").fadeOut("slow")
     drawCount = drawCount + 1;
-
     /*Make a random copy of the Main  Data Arra*/
     arrRandCopy = makeRandArrayCopy(arr);
     if ($(namesbox).val() === ''||arr.length === 0) {
@@ -260,7 +248,6 @@ function Draw() {
  this is the function that does the actual animation
  */
 function standout(text, count) {
-
     $('.name').animate({ opacity: 100 });
     $('#result1').animate({ height: '+=600px' }, "fast");
     $('#result1').html(`<p class='animate-charcter'>${text}</p>`)
@@ -278,9 +265,8 @@ function standout(text, count) {
 
 function removevictim() {
     save();
-
     setTimeout(() => {
-        $('#result1').fadeOut();
+        $('#result1').animate({ top: '0' }, 4000);
         $("div").remove("#result1");
         $("div").remove(".name");
         $("div").remove(".extra");
@@ -362,14 +348,10 @@ function save() {
     $("#go-btn").removeAttr('disabled')
     $("#nameList").removeAttr('disabled')
     $("#shw-results").removeAttr('disabled')
-
 }
 function reset() {
     window.location.replace("")
 }
-
-
-
 /**
  * this function takes the values from the namebox textarea and apdates the  main data array
  *
