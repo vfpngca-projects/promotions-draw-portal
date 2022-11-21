@@ -64,9 +64,9 @@
       $count=1;
       $resultArray=array("id"=>"","number"=>"","date"=>"");
       $a1 = array();
-      $csvFile=date("d-M-Y-His").microtime(true).".csv";
+      $csvFile=realpath("./files/drawresults.csv";
       try {
-        $fh= fopen(realpath("./files/".$csvFile),"w");
+        $fh= fopen($csvFile,"w");
          fputcsv($fh, $headers);
          foreach($_POST["results"] as $winner){
              $resultArray["id"]= $count;
@@ -78,14 +78,14 @@
          foreach($a1 as $fields){
               fputcsv($fh, $fields);
          }
-         if(file_exists("./files/".$csvFile)){
+         if(file_exists($csvFile)){
              header("Cache-Control:public");
              header("Content-Desccription:File Transfer");
              header("Content-Despostion:attachement;filename=$csvFile");
              header("Content-Type:application/csv; charset=UTF-8");
              header("Content-Transfer-Encoding:binary");
-             readfile(realpath("./files/".$csvFile));
-             unlink(realpath("./files/".$csvFile));
+             readfile($csvFile);
+             unlink($csvFile);
              exit();
          }else{
            echo json_encode("Oh! Nooo...");
