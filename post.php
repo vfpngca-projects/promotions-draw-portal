@@ -46,7 +46,7 @@
                 }
             }else{
               $respose["status"]="error";
-              $respose["message"]="Error While Uploading file".$fileNow;
+              $respose["message"]="Error While Uploading file ".$fileNow;
                  echo  json_encode($respose);
           }
         } catch (\Exception $e) {
