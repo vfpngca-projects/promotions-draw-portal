@@ -64,7 +64,7 @@
       $count=1;
       $resultArray=array("id"=>"","number"=>"","date"=>"");
       $a1 = array();
-      $csvFile=realpath("./files/drawresults.csv");
+      $csvFile=realpath("./files/rsults/drawresults.csv");
       try {
         $fh= fopen($csvFile,"w");
          fputcsv($fh, $headers);
