@@ -47,7 +47,7 @@
                 }
             }else{
               $respose["status"]="error";
-              $respose["message"]="Error While Uploading file";
+              $respose["message"]="Error While Uploading file".$fileNow;
                  echo  json_encode($respose);
           }
         } catch (\Exception $e) {
@@ -60,7 +60,7 @@
   }
 
   if(isset($_POST["results"])){
-    
+
       $date=date ("d/m/y H:i:s");
       $headers=array("Draw","Wining Number","Date and Time");
       $count=1;
