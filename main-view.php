@@ -61,7 +61,7 @@
   <!-- Copyright -->
   <div class="text-reset fw-bold text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     <a class="text-reset fw-bold text-left p-4 copyright" href="https://vodafone.com.pg/" target="_blank">Vodafone PNG</a> &copy; <span id="year"></span>
-    <a class="text-reset fw-bold text-right p-4" id="instructions" href="#">Instructions of Use</a>
+    <a class="text-reset fw-bold text-right p-4" id="instructions" href="#"> Users Instruction</a>
   </div>
   <!-- Copyright -->
 </footer>
