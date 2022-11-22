@@ -107,7 +107,7 @@ $("#fileLoadingForm").on("submit", function (e) {
             setTimeout(()=>{
               $("#entries").html("<img src='/images/loading.gif'/>")
               $("#entries").append(`<p>Finalising list..<p>`)
-            },1500)
+            },1000)
             $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
             /* Loop through the response data array and store each element into  main data array arr[]*/
@@ -137,7 +137,7 @@ $("#fileLoadingForm").on("submit", function (e) {
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
                   $("#main-nav").css({ "padding-top": "5px" });
-            },100)
+            },1500)
           }
         },
         error:(err)=>{
