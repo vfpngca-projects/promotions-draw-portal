@@ -2,9 +2,12 @@
 <div class="container-fluid">
   <h2>VF-PNG Promotions Draw Portal</h2>
   <h3 class="text-primary">Instructions of use</h3>
+  <p>The portal  does not have a preloaded data source, neither does it connects to a data source.
+This means that upon the process of making the draws the user have to load data from an external source (via a csv file) in order to satrt the draw.
+  </p>
    <h4> Preparing of the Data for Draw (Important)*</h4>
    <ol>
-     <li> You will have to import data from extrenal source start the draw.Use  excel or any spread sheet application  to collect data needed to run the draws;
+     <li> You will have to import data from extrenal source to start the draw.Use  excel or any spread sheet application  to collect data needed to run the draws;
      Make sure to  have them on one  column; without any column titles (remove any column titles)**;</li>
   <li>Save the file in a (.csv) format and import them by clicking the LOAD ENTRIES button.</li>
 
