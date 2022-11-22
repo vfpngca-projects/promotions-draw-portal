@@ -55,7 +55,7 @@
              echo  json_encode($respose);
         }
       }
-    die();
+    die("Errorororor");
   }
 
   if(isset($_POST["results"])){
