@@ -3,13 +3,13 @@
   <h2>VF-PNG Promotions Draw Portal</h2>
   <h3 class="text-primary">Instructions of use</h3>
   <p>The portal  does not have a preloaded data source, neither does it connects to a data source.
-This means that upon the process of making the draws the user have to load data from an external source (via a csv file) in order to satrt the draw.
+This means that upon the process of making the draws the user have to load data from an external source (via a csv file) in order to start the draws.
   </p>
-   <h4> Preparing of the Data for Draw (Important)*</h4>
+   <h4> Preparing of the Data for Draw (Important)<sup class="text-danger">*</sup></h4>
    <ol>
-     <li> You will have to import data from extrenal source to start the draw.Use  excel or any spread sheet application  to collect data needed to run the draws;
-     Make sure to  have them on one  column; without any column titles (remove any column titles)**;</li>
-  <li>Save the file in a (.csv) format and import them by clicking the LOAD ENTRIES button.</li>
+     <li>Use  excel or any spread sheet application  to collect data needed to run the draws;
+     Make sure to  have them in one  column; without any column title; (remove any column title)<sup class="text-danger">*</sup>;</li>
+  <li>Save them in a (.csv) fil format and import them by clicking the LOAD ENTRIES button.</li>
 
   <li>Click the GO button to run the Draw</li>
   <li>Click the Save Winner button below the draw result to save the result of the draw being made. Repeat the third  and fourth step for the number of draws you want to make.</li>
@@ -18,6 +18,6 @@ This means that upon the process of making the draws the user have to load data 
   <li>Click the reset button on the top left to reset all the Data being uploaded or Populated within the Draw portal.</li>
    </ol>
 
-   <p>Note*:
+   <p>Note:
    You will have to reupload the data file and restart the whole process after resetting.</p>
 </div>
