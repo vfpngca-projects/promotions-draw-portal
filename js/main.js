@@ -63,13 +63,9 @@ $("#save-and-update").on("click", () => {
     $(namesbox).attr('disabled', 'disabled');
     saveEntries()
 })
-
-
 $("#dataFile").on("change", () => {
     $("#fileLoadingForm").submit();
 })
-
-
 
 $("#instructions").on("click", function(e){
   e.preventDefault();
@@ -134,14 +130,14 @@ $("#fileLoadingForm").on("submit", function (e) {
             setTimeout(() => {
               $('#entries').html('');
                 $("#entries").html(`${arr.length} Entries Loaded`)
-                  $(namesbox).fadeIn(2000)
+                  $(namesbox).fadeIn(1000)
                   $("#go-btn").fadeIn("slow")
                   $("#reset").fadeIn("slow")
                   $("#upload").hide()
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
                   $("#main-nav").css({ "padding-top": "5px" });
-            },2000)
+            },1600)
           }
         },
         error:(err)=>{
