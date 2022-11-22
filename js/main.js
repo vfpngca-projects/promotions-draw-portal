@@ -137,7 +137,7 @@ $("#fileLoadingForm").on("submit", function (e) {
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
                   $("#main-nav").css({ "padding-top": "5px" });
-            },1600)
+            },100)
           }
         },
         error:(err)=>{
