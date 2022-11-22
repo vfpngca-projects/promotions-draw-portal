@@ -34,6 +34,7 @@
                       fclose($csvFile);
                       unlink($fileNow);
                       echo json_encode($respose);
+                      // echo "This is resonse from the server";
                 } catch (\Exception $e) {
                   $respose["status"]="error";
                   $respose["message"]="Exception Error ".$e->getMessage();
@@ -55,7 +56,7 @@
              echo  json_encode($respose);
         }
       }
-    die("Errorororor");
+    // die("Errorororor");
   }
 
   if(isset($_POST["results"])){
