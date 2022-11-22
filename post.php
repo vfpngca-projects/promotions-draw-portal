@@ -36,7 +36,7 @@
                       echo json_encode($respose);
                 } catch (\Exception $e) {
                   $respose["status"]="error";
-                  $respose["message"]=$e->getMessage();
+                  $respose["message"]="Exception Error ".$e->getMessage();
                   echo  json_encode($respose);
                 }
               }else{
@@ -51,7 +51,7 @@
           }
         } catch (\Exception $e) {
           $respose["status"]="error";
-          $respose["message"]=$e->getMessage();
+          $respose["message"]="Exception Error ".$e->getMessage();
              echo  json_encode($respose);
         }
       }
