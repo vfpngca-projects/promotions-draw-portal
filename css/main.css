@@ -1,12 +1,12 @@
 
-body{background: #e78e8e url(../images/light3.jpg);background-repeat: no-repeat;overflow-y: hidden;}
+body{background: #e78e8e url(../images/light3.jpg);background-size: 100%; background-repeat: no-repeat;overflow-y: hidden; }
 #dropdown{display: none}
 #values{position: relative;font-size: 200%;text-align: center;margin: 0 auto;z-index: 1}
-.name{overflow: hidden;display: block;width: 1000px;margin: auto;font-size: 600%;color: #636161}
-#namesbox{text-align: center;display: none;min-height: 600px;width:500px;margin: auto;font-size: 50px;color: #333;resize: none;border: 1px solid #929291e3;box-shadow: 1px 2px 4px 3px rgba(0,0,0,0.5);
+.name{overflow: hidden;display: block;width: 2000px;margin: auto;font-size: 800%;color: #636161}
+#namesbox{text-align: center;display: none;min-height: 700px;width:800px;margin: auto;font-size: 600%;color: #333;resize: none;border: 1px solid #929291e3;box-shadow: 1px 2px 4px 3px rgba(0,0,0,0.5);
 background-color:rgba(255,255,255,0.3)}
 .extra{font-size: 16px;margin-top: 20px}
-#result1{padding: 20px;z-index: 40;background: url(../images/fireworks.gif) no-repeat center;background-size: 100%;font-size: 400%}
+#result1{padding: 20px;z-index: 40;background: url(../images/fireworks.gif) no-repeat center;background-size: 100%;font-size: 800%}
 #result1 p{color: #2cd348;text-shadow: 1px 2px rgba(255, 251, 0, 0.055)}
 #result1 a{color: #ffffff;text-shadow: none;border-radius: 5px}
 #varnote{font-size: 40px;text-align: center;padding: 30px}
@@ -20,7 +20,7 @@ background-color:rgba(255,255,255,0.3)}
 #save-and-update{display: none}
 #headline{font-weight: 300;font-size: 300%}
 #modal-1{background-color: rgba(0, 0, 0, 0.3)}
-#modal-1 .modal-content{height: 600px;overflow-y: scroll}
+#modal-1 .modal-content{height: 800px;overflow-y: scroll;}
 #namesbox::-webkit-scrollbar{width: .25em}
 #namesbox::-webkit-scrollbar-track{box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)}
 #namesbox::-webkit-scrollbar-thumb{background-color: darkgrey;outline: 1px solid slategrey}
@@ -29,7 +29,7 @@ background-color:rgba(255,255,255,0.3)}
 #modal-1 .modal-content::-webkit-scrollbar-thumb{background-color: darkgrey;outline: 1px solid slategrey}
 .header h1{font-size: 4rem;font-weight: 300;font-family:Segoe , Tahoma, Geneva, Verdana, sans-serif;text-transform: lowercase}
 .animate-charcter{text-transform: uppercase;background-image: linear-gradient(-25deg,#4a4747 0%,#db63c9 29%,#f10e80 67%,#00ff00 100%);background-size: auto auto;background-clip: border-box;background-size: 200% auto;color: #fff;background-clip: text;text-fill-color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: textclip 2s linear infinite;display: inline-block}
-#main-nav{padding:10px;margin: auto;position: relative}@keyframes textclip{from{background-position: 100% center}to{background-position: 200% center}}
+#main-nav{padding:10px;margin: auto;position: relative; z-index:999}@keyframes textclip{from{background-position: 100% center}to{background-position: 200% center}}
 #entries img{width: 40px}
 
 #entries p{font-size: 1.5rem}
@@ -50,4 +50,24 @@ position: fixed;
 width: 100%;
 padding: 23px;
 background-color: rgba(0, 0, 0, 0.5);
+}
+.lights{
+  
+  width:250px;
+  height: 50%;
+  z-index:123;
+  background-color: rgba(219, 202, 218, 0.759);
+  background-image: url(../images/fireworks.gif) no-repeat center;background-size: 100%;;
+}
+.left-ligths{
+  position: fixed;
+  left: 0;
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius:1000px;
+}
+.right-ligths{
+  position: fixed;
+  right: 0;
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
 }

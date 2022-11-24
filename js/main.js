@@ -96,16 +96,16 @@ $("#fileLoadingForm").on("submit", function (e) {
         cache: false,
         processData: false,
         beforeSend: () => {
-            $("#entries").html("<img src='/images/loading.gif'/>")
+            $("#entries").html("<img src='/images/bars.svg'/>")
             $("#entries").append("<p>Uploading File...<p>")
         },
         success: (response) => {
           let resData = JSON.parse(response)
           if(resData .status==="error"){}else {
-            $("#entries").html("<img src='/images/loading.gif'/>")
+            $("#entries").html("<img src='/images/bars.svg'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
             setTimeout(()=>{
-              $("#entries").html("<img src='/images/loading.gif'/>")
+              $("#entries").html("<img src='/images/bars.svg'/>")
               $("#entries").append(`<p>Finalising list..<p>`)
             },1000)
             $("#fileLoadingForm")[0].reset();

@@ -14,7 +14,7 @@
   </head>
   <body>
       <div class="modal modal-open" id="modal-1">
-          <div class="modal-content modal-dialog">
+          <div class="modal-content">
               <div class="modal-header">
                   <button class="close" id="modal-1-close">&times;</button>
               </div>
@@ -22,20 +22,26 @@
               </div>
           </div>
       </div>
+      <div class="lights left-ligths">
+    left
+      </div>
+      <div class="lights right-ligths">
+right
+      </div>
       <main class="container-fluid">
           <div class="header" id="header">
               <div id="varnote" class="container">
                   <img src="images/logo-footer.png">
-                  <h1 class="text-capitalize"> Promotion Draw  Portal </h1>
+                  <h1 class="text-capitalize"> Promotions  Draw</h1>
               </div>
-              <div id="main-nav">
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="button btn btn-outline-danger  btn-lg" id="reset">Reset</button>
-                        <button type="button" class="button  btn btn-outline-secondary btn-lg" id="save-and-update">Save &amp; Update</button>
-                        <button type="button" class="button  btn btn-outline-primary btn-lg" id="nameList">Entries</button>
-                        <button type="button" class="button  btn btn-outline-info btn-lg" id="upload">Load Entries</button>
-                        <button type="button" class="button  btn btn-outline-info btn-lg" id="shw-results">Show results</button>
-                        <button type="button" class="button  btn btn-outline-success btn-lg" id="go-btn">GO &#8594;</button>
+              <div id="main-nav" id="row">
+                    <div class="d-flex justify-content-left">
+                        <button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button>
+                        <button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button>
+                        <button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button>
+                        <button type="button" class="button  btn btn-outline-info btn-block" id="upload">Load Entries</button>
+                        <button type="button" class="button  btn btn-outline-info btn-block" id="shw-results">Show results</button>
+                        <button type="button" class="button  btn btn-outline-success btn-block" id="go-btn">GO &#8594;</button>
                     </div>
               </div>
           </div>
