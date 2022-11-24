@@ -60,8 +60,8 @@
   }
 
   if(isset($_POST["results"])){
-      $date=date ("d/m/y H:i:s");
-      $headers=array("Draw","Wining Number","Date and Time");
+      $date=date ("d/m/Y");
+      $headers=array("Draw","Wining Number","Date");
       $count=1;
       $resultArray=array("id"=>"","number"=>"","date"=>"");
       $a1 = array();
