@@ -23,10 +23,10 @@
           </div>
       </div>
       <div class="lights left-ligths">
-         <p>Left</p> 
+         <p></p> 
       </div>
       <div class="lights right-ligths">
-        <p>Right</p>
+        <p></p>
       </div>
       <main class="container-fluid">
           <div class="header" id="header">
