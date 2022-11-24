@@ -2,7 +2,7 @@
 body{background: #e78e8e url(../images/light3.jpg);background-size: 100%; background-repeat: no-repeat;overflow-y: hidden; }
 #dropdown{display: none}
 #values{position: relative;font-size: 200%;text-align: center;margin: 0 auto;z-index: 1}
-.name{overflow: hidden;display: block;width: 1000px;margin: auto;font-size: 800%;color: #636161}
+.name{overflow: hidden;display: block;width: 1500px;margin: auto;font-size: 800%;color: #636161}
 #namesbox{text-align: center;display: none;min-height: 700px;width:800px;margin: auto;font-size: 600%;color: #333;resize: none;border: 1px solid #929291e3;box-shadow: 1px 2px 4px 3px rgba(0,0,0,0.5);
 background-color:rgba(255,255,255,0.3)}
 .extra{font-size: 16px;margin-top: 20px}
