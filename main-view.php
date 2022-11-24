@@ -35,7 +35,7 @@
                   <h1 class="text-capitalize"> Promotions  Draw</h1>
               </div>
               <div id="main-nav">
-                    <div class="d-flex justify-content-left row">
+                    <div class="d-flex justify-content-left">
                         
                         <button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button>
                         <button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button>
