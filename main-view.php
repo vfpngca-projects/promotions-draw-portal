@@ -34,14 +34,15 @@
                   <img src="images/logo-footer.png">
                   <h1 class="text-capitalize"> Promotions  Draw</h1>
               </div>
-              <div id="main-nav" id="row">
-                    <div class="d-flex justify-content-left">
-                        <button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button>
+              <div id="main-nav">
+                    <div class="d-flex justify-content-left row">
+                        
                         <button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button>
                         <button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button>
                         <button type="button" class="button  btn btn-outline-info btn-block" id="upload">Load Entries</button>
                         <button type="button" class="button  btn btn-outline-info btn-block" id="shw-results">Show results</button>
                         <button type="button" class="button  btn btn-outline-success btn-block" id="go-btn">GO &#8594;</button>
+                        <button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button>
                     </div>
               </div>
           </div>
