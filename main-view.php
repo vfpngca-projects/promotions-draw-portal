@@ -23,10 +23,16 @@
               </div>
           </div>
       </div>
+
+
       <div class="lights left-ligths fixed-top">
+      
       </div>
       <div class="lights right-ligths bottom-right">
-      
+      <div id="ballWrapper">
+				<div id="ball"></div>		
+				</div>	
+      </div>
       <main class="container-fluid">
           <div class="header" id="header">
               <div id="varnote" class="container">
