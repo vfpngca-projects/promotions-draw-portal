@@ -131,6 +131,9 @@ $("#fileLoadingForm").on("submit", function (e) {
               $('#entries').html('');
                 $("#entries").html(`${arr.length} Entries Loaded`)
                   $(namesbox).fadeIn(1000)
+                //   even-2
+                $("#nav-buttons").classList.remove("even-2");
+                $("#nav-buttons").classList.add("even-7");
                   $("#go-btn").fadeIn("slow")
                   $("#reset").fadeIn("slow")
                   $("#upload").hide()

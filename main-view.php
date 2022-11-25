@@ -23,13 +23,13 @@
               </div>
           </div>
       </div>
-      <div class="lights left-ligths">
-      <div class="bubbles">
-         <span style="--i:12;"></span>
-     </div>
+      <div class="lights left-ligths fixed-top">
+      
       </div>
-      <div class="lights right-ligths">
-        <p></p>
+      <div class="lights right-ligths bottom-right">
+      <div id="ballWrapper">
+				<div id="ball"></div>		
+				</div>	
       </div>
       <main class="container-fluid">
           <div class="header" id="header">
@@ -37,18 +37,17 @@
                   <img src="images/logo-footer.png">
                   <h1 class="text-capitalize"> Promotions  Draw</h1>
               </div>
-              <div id="main-nav">
-                    <div class="d-flex justify-content-left">
-                    <button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button>
-                        <button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button>
-                        <button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button>
-                        <button type="button" class="button  btn btn-outline-info btn-block" id="upload">Load Entries</button>
-                        <button type="button" class="button  btn btn-outline-info btn-block" id="shw-results">Show results</button>
-                        <button type="button" class="button  btn btn-outline-success btn-block" id="go-btn">GO &#8594;</button>
-                        
-                    </div>
-              </div>
-          </div>
+          </div>  
+		<div class="large-12 columns" id="main-nav" >
+		<ul class="button-group even-2" id="nav-buttons">
+            <li><button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button></li>
+			<li><button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button></li>
+			<li><button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button></li>
+			<li><button type="button" class="button  btn btn-outline-info btn-block" id="upload">Load Entries</button></li>
+            <li><button type="button" class="button  btn btn-outline-info btn-block" id="shw-results">Show results</button></li>
+            <li><button type="button" class="button  btn btn-outline-success btn-block" id="go-btn">GO &#8594;</button></li>
+            </ul>
+		</div>
           <div class="row">
               <div class="col-md-12">
                   <div id="dropdown">
@@ -66,7 +65,6 @@
                   </div>
               </div>
       </main>
-     
 <footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
   <!-- Copyright -->
   <div class="text-reset fw-bold text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
