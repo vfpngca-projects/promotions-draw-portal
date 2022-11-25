@@ -13,6 +13,7 @@
     <script src="js/jquery-latest.min.js"></script>
   </head>
   <body>
+    
       <div class="modal modal-open" id="modal-1">
           <div class="modal-content">
               <div class="modal-header">
@@ -23,7 +24,9 @@
           </div>
       </div>
       <div class="lights left-ligths">
-         <p></p> 
+      <div class="bubbles">
+         <span style="--i:12;"></span>
+     </div>
       </div>
       <div class="lights right-ligths">
         <p></p>
@@ -63,15 +66,16 @@
                   </div>
               </div>
       </main>
-      <!-- Footer -->
+     
 <footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
   <!-- Copyright -->
   <div class="text-reset fw-bold text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     <a class="text-reset fw-bold text-left p-4 copyright" href="https://vodafone.com.pg/" target="_blank">Vodafone PNG</a> &copy; <span id="year"></span>
     <a class="text-reset fw-bold text-right p-4" id="instructions" href="#"> Users Instruction</a>
   </div>
-  <!-- Copyright -->
+  
 </footer>
+
 
       <script src="./js/main.js"></script>
   </body>
