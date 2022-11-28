@@ -29,19 +29,19 @@
       </div>
       <main class="container-fluid">
           <div class="header" id="header">
-              <div id="varnote" class="container">
+              <div id="varnote">
                   <img src="images/logo-footer.png">
                   <h1 class="text-capitalize"> Promotions  Draw</h1>
               </div>
           </div>  
-		<div class="large-12 columns" id="main-nav" >
+		<div class="large-8 offset-2 columns" id="main-nav" style="width:80%; padding-left: 10%; padding-right: 10%; " >
 		<ul class="button-group even-2" id="nav-buttons">
-            <li><button type="button" class="button  btn btn-outline-danger  btn-block" id="reset">Reset</button></li>
-			<li><button type="button" class="button  btn btn-outline-secondary btn-block" id="save-and-update">Save &amp; Update</button></li>
-			<li><button type="button" class="button  btn btn-outline-primary btn-block" id="nameList">Entries</button></li>
-			<li><button type="button" class="button  btn btn-outline-info btn-block" id="upload">Load Entries</button></li>
-            <li><button type="button" class="button  btn btn-outline-info btn-block" id="shw-results">Show results</button></li>
-            <li><button type="button" class="button  btn btn-outline-success btn-block" id="go-btn">GO &#8594;</button></li>
+            <li><button type="button" class="button  btn btn-danger  btn-block" id="reset">Reset</button></li>
+			<li><button type="button" class="button  btn btn-secondary btn-block" id="save-and-update">Save &amp; Update</button></li>
+			<li><button type="button" class="button  btn btn-primary btn-block" id="nameList">Entries</button></li>
+			<li><button type="button" class="button  btn btn-info btn-block" id="upload">Load Entries</button></li>
+            <li><button type="button" class="button  btn btn-info btn-block" id="shw-results">Show results</button></li>
+            <li><button type="button" class="button  btn btn-success btn-block" id="go-btn">GO &#8594;</button></li>
             </ul>
 		</div>
           <div class="row">
