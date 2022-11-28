@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="./css/cosmo.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="js/jquery-latest.min.js"></script>
+    <script src="js/number-rush.js"></script>
   </head>
   <body>
-  
       <div class="modal " id="modal-1">
           <div class="modal-content container">
               <div class="modal-header">
@@ -23,10 +23,7 @@
               </div>
           </div>
       </div>
-
-
       <div class="lights left-ligths fixed-top">
-      
       </div>
       <div class="lights right-ligths bottom-right">
       </div>
@@ -70,10 +67,7 @@
     <a class="text-reset fw-bold text-left p-4 copyright" href="https://vodafone.com.pg/" target="_blank">Vodafone PNG</a> &copy; <span id="year"></span>
     <a class="text-reset fw-bold text-right p-4" id="instructions" href="#"> Users Instruction</a>
   </div>
-  
 </footer>
-
-
-      <script src="./js/main.js"></script>
+<script src="./js/main.js"></script>
   </body>
 </html>

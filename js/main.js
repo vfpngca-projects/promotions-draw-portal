@@ -100,22 +100,22 @@ $("#fileLoadingForm").on("submit", function (e) {
             $("#entries").append("<p>Uploading File...<p>")
         },
         success: (response) => {
-          let resData = JSON.parse(response)
+
           if(resData .status==="error"){}else {
             $("#entries").html("<img src='/images/bars.svg'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
             setTimeout(()=>{
               $("#entries").html("<img src='/images/bars.svg'/>")
               $("#entries").append(`<p>Finalising list..<p>`)
-            },1000)
-            $("#fileLoadingForm")[0].reset();
+              $("#fileLoadingForm")[0].reset();
             $("#fileLoadingForm").fadeOut()
             /* Loop through the response data array and store each element into  main data array arr[]*/
             const resnums=resData.message;
-            resData.message.forEach(elem => {
-              arr.push(elem)
-            });
-            resData=null;
+            for(let i=0; i<resnums.length; i++){
+                arr.push(resnums[i])
+            }
+            
+            resData="";
             let nums = arr[0];
             /*
               Loop through the data array and set line breaks to each elements
@@ -126,7 +126,11 @@ $("#fileLoadingForm").on("submit", function (e) {
                 nums = nums + "\n" + number;
             }
             /*Set the Values of the Text box with  nums*/
+
             $(namesbox).val(nums)
+            },1000)
+            
+            
             setTimeout(() => {
               $('#entries').html('');
                 $("#entries").html(`${arr.length} Entries Loaded`)
@@ -282,7 +286,6 @@ function removevictim() {
  *
  this function makes  coppies of 5000 main array elements from a randomly selected start index
  into and array just to use it for the animation.
-
  this to reduce loading time onto the DOM and to start the animation as fast as posible
  *
  */
