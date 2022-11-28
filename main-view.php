@@ -61,6 +61,8 @@
                   </div>
               </div>
       </main>
+      <div class="lights right-ligths bottom-right">
+      </div>
 <footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
   <!-- Copyright -->
   <div class="text-reset fw-bold text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">

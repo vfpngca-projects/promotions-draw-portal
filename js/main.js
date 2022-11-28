@@ -100,8 +100,8 @@ $("#fileLoadingForm").on("submit", function (e) {
             $("#entries").append("<p>Uploading File...<p>")
         },
         success: (response) => {
-
-          if(resData .status==="error"){}else {
+            let resData=JSON.parse(response);
+          if(resData.status==="error"){}else {
             $("#entries").html("<img src='/images/bars.svg'/>")
             $("#entries").append(`<p>Loading Data...<p>`)
             setTimeout(()=>{
