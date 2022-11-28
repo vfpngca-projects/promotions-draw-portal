@@ -30,8 +30,8 @@
       <main class="container-fluid">
           <div class="header" id="header">
               <div id="varnote">
-                  <img src="images/logo-footer.png">
-                  <h1 class="text-capitalize"> Promotions  Draw</h1>
+                  <img src="images/logo-footer.png" style="width: 90%;">
+                  <h1 class="text-capitalize"style="font-size:5rem"> Promotions  Draw</h1>
               </div>
           </div>  
 		<div class="large-8 offset-2 columns" id="main-nav" style="width:80%; padding-left: 10%; padding-right: 10%; " >
