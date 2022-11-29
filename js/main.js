@@ -137,13 +137,13 @@ $("#fileLoadingForm").on("submit", function (e) {
                   $(namesbox).fadeIn(1000)
                 //   even-2
                 $("#nav-buttons").removeClass("even-2");
-                $("#nav-buttons").addClass("even-7");
+                $("#nav-buttons").addClass("even-4");
                   $("#go-btn").fadeIn("slow")
                   $("#reset").fadeIn("slow")
                   $("#upload").hide()
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
-                  $("#main-nav").css({ "padding-top": "5px" });
+                  $("#main-nav").css({ "margin-top": "30px" });
             },1500)
           }
         },
@@ -190,6 +190,8 @@ this function runs the the draw and piks out a random number from the main data 
  */
 function Draw() {
     $("#entries").fadeOut("slow")
+    $("#nav-buttons").removeClass("even-4");
+    $("#nav-buttons").addClass("even-5");
     drawCount = drawCount + 1;
     /*Make a random copy of the Main  Data Arra*/
     arrRandCopy = makeRandArrayCopy(arr);
@@ -277,7 +279,7 @@ function removevictim() {
         $("div").remove(".name");
         $("div").remove(".extra");
         $("#values").html("");
-        $('#headline').html('<p class="text-secondary " id="saved-txt">Winner Saved &#128522;</p><p class="text-primary"> Click GO for next roll.<p>');
+        $('#headline').html('<p class="text-secondary " id="saved-txt">Winner Saved</p><p class="text-primary"> Click GO for next roll.<p>');
     }, 1000)
 }
 
