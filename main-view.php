@@ -27,14 +27,14 @@
       </div>
       <div class="lights right-ligths bottom-right">
       </div>
-      <main class="container-fluid">
+      <main class="container-fluid" style="background-image:url(/images/fireworks.gif);height:5000px;">
           <div class="header" id="header">
               <div id="varnote">
-                  <img src="images/logo-footer.png" style="width: 90%;">
-                  <h1 class="text-capitalize"style="font-size:5rem"> Promotions  Draw</h1>
+                  <img src="images/logo-footer.png" style="width: 80%;">
+                  <h1 class="text-capitalize"style="font-size:6rem"> Promotions  Draw</h1>
               </div>
           </div>  
-		<div class="large-8 offset-2 columns" id="main-nav" style="width:80%; padding-left: 10%; padding-right: 10%; " >
+		<div class="justify-content-center columns" id="main-nav" style="width:80%; padding-left: 10%; padding-right: 10%; " >
 		<ul class="button-group even-2" id="nav-buttons">
             <li><button type="button" class="button  btn btn-danger  btn-block" id="reset">Reset</button></li>
 			<li><button type="button" class="button  btn btn-secondary btn-block" id="save-and-update">Save &amp; Update</button></li>
