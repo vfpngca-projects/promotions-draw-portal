@@ -143,7 +143,7 @@ $("#fileLoadingForm").on("submit", function (e) {
                   $("#upload").hide()
                   $("#save-and-update").show()
                   $("#varnote").slideUp("fast");
-                  $("#main-nav").css({ "margin-top": "30px" });
+                  $("#main-nav").css({ "margin-top": "20px" });
             },1500)
           }
         },
