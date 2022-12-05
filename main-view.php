@@ -31,7 +31,7 @@
           <div class="header" id="header">
               <div id="varnote">
                   <img src="images/logo-footer.png" style="width: 80%;">
-                  <h1 class="text-capitalize"style="font-size:6rem"> Promotions  Draw</h1>
+                  <h1 class="text-capitalize"style="font-size:6rem"> Promotion  Draws</h1>
               </div>
           </div>  
 		<div class="justify-content-center columns" id="main-nav" style="width:80%; padding-left: 10%; padding-right: 10%; " >
